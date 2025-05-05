@@ -2,7 +2,8 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
-    public static final int SIZE = 8 ;
+    public static final int SIZE = 8;
+
     public static void main(String[] args) {
         int[][] colors = new int[SIZE][SIZE];
         int[][] rotatedColors = new int[SIZE][SIZE];
@@ -23,7 +24,7 @@ public class Main {
         System.out.println("3. Поворот на 270 градусов");
         String input = scanner.nextLine();
         int operation = Integer.parseInt(input);
-        System.out.println(input);
+
         switch (operation) {
             case 1:
                 for (int i = 0; i < SIZE; i++) {
@@ -59,16 +60,17 @@ public class Main {
         }
         outToScreen(rotatedColors);
     }
-        public static void outToScreen(int [][] colors) {
-            System.out.println(" ");
-            for (int i = 0; i < SIZE; i++) {
-                for (int j = 0; j < SIZE; j++) {
 
-                    System.out.format("%4d", colors[i][j]);
-                }
+    public static void outToScreen(int[][] colors) {
+        System.out.println(" ");
+        for (int i = 0; i < SIZE; i++) {
+            for (int j = 0; j < SIZE; j++) {
 
-                System.out.println();
+                System.out.format("%4d", colors[i][j]);
             }
+
+            System.out.println();
+        }
 
 
     }
